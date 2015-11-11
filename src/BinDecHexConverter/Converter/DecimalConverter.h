@@ -11,7 +11,7 @@
 #include<string>
 using namespace std;
 
-namespace testNamespace
+namespace NumberBaseConverter
 {
     class DecimalConverter
     {

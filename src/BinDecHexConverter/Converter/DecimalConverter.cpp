@@ -1,10 +1,9 @@
 
-#include<iostream>
-#include<cstdio>
+#include <cstdio>
 #include "DecimalConverter.h"
 using namespace std;
 
-namespace testNamespace
+namespace NumberBaseConverter
 {
     string DecimalConverter::ConvertToBinary(int number)
     {

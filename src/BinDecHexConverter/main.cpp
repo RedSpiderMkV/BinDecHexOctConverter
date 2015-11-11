@@ -22,7 +22,8 @@ int main(int argc, char* argv[])
     while(input > -1)
     {
         cin >> input;
-        newConverter.ConvertToBinary(input);
+        cout << newConverter.ConvertToBinary(input) << endl;
+        cout << newConverter.ConvertToHexadecimal(input) << endl;
     }
     
     return 0;

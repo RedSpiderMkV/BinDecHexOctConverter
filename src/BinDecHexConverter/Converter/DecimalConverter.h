@@ -8,6 +8,9 @@
 #ifndef DECIMALCONVERTER_H
 #define	DECIMALCONVERTER_H
 
+#include<string>
+using namespace std;
+
 namespace testNamespace
 {
     class DecimalConverter
@@ -15,7 +18,8 @@ namespace testNamespace
         private:
             
         public:
-            void ConvertToBinary(int number);
+            string ConvertToBinary(int number);
+            string ConvertToHexadecimal(int number);
     };
 }
 

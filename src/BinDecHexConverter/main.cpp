@@ -1,26 +1,30 @@
+/* 
+ * File:   main.cpp
+ * Author: RedSpiderMkV
+ *
+ * Created on 11 November 2015, 21:38
+ */
 
 #include<iostream>
+#include "Converter/DecimalConverter.h"
+
 using namespace std;
-
-void printDecToBin(int decimalNumber)
+/*
+ * 
+ */
+int main(int argc, char* argv[])
 {
-    if(decimalNumber / 2 != 0)
+    cout << "Hello world!" << endl;
+    
+    testNamespace::DecimalConverter newConverter;
+    
+    int input = 0;
+    while(input > -1)
     {
-        printDecToBin(decimalNumber / 2);
-    } // end if
-
-    cout << decimalNumber % 2;
-
-} // end method
-
-int main(int argc, char *argv[])
-{
-    cout << "Hello World!" << endl;
-
-    printDecToBin(5);
-    cout << endl;
-    printDecToBin(12);
-
-
+        cin >> input;
+        newConverter.ConvertToBinary(input);
+    }
+    
     return 0;
 }
+

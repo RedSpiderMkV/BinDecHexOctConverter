@@ -1,16 +1,17 @@
 
 #include <cstdio>
+#include <sstream>
 #include "DecimalConverter.h"
 using namespace std;
 
 namespace NumberBaseConverter
 {
-    string DecimalConverter::ConvertToBinary(int number)
+    string DecimalConverter::convertToBinary(int number)
     {
         string binRep("");
         if(number / 2 != 0)
         {
-            binRep.append(ConvertToBinary(number / 2));
+            binRep.append(convertToBinary(number / 2));
         } // end if
         
         char temp[1];
@@ -18,14 +19,24 @@ namespace NumberBaseConverter
         binRep.append(temp);
         
         return binRep;
+    }
+    
+    string DecimalConverter::ConvertToBinary(string decStr)
+    {
+        int number;
+        stringstream ss;
+        ss << std::dec << decStr;
+        ss >> number;
+        
+        return convertToBinary(number);
     } // end method
     
-    string DecimalConverter::ConvertToHexadecimal(int number)
+    string DecimalConverter::convertToHexadecimal(int number)
     {
         string hexRep("");
         if(number / 16 != 0)
         {
-            hexRep.append(ConvertToHexadecimal(number / 16));
+            hexRep.append(convertToHexadecimal(number / 16));
         } // end if
         
         char temp[1];
@@ -35,4 +46,13 @@ namespace NumberBaseConverter
         return hexRep;
     } // end method
     
+    string DecimalConverter::ConvertToHexadecimal(string decStr)
+    {
+        int number;
+        stringstream ss;
+        ss << std::dec << decStr;
+        ss >> number;
+        
+        return convertToHexadecimal(number);
+    } // end method    
 } // end namespace

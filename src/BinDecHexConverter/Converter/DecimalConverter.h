@@ -16,10 +16,11 @@ namespace NumberBaseConverter
     class DecimalConverter
     {
         private:
-            
+            string convertToBinary(int number);
+            string convertToHexadecimal(int number);
         public:
-            string ConvertToBinary(int number);
-            string ConvertToHexadecimal(int number);
+            string ConvertToBinary(string decStr);
+            string ConvertToHexadecimal(string decStr);
     };
 }
 

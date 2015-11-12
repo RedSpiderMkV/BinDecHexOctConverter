@@ -27,11 +27,11 @@ int main(int argc, char* argv[])
     while(input != "-1")
     {
         cin >> input;
-        //cout << newConverter.ConvertToBinary(input) << endl;
-        //cout << newConverter.ConvertToHexadecimal(input) << endl;
+        cout << newConverter.ConvertToBinary(input) << endl;
+        cout << newConverter.ConvertToHexadecimal(input) << endl;
         
-        // chane to string to make it work
-        cout << hexConverter.ConvertToBinary(input);
+        //cout << hexConverter.ConvertToBinary(input) << endl;
+        //cout << hexConverter.ConvertToDecimal(input) << endl;
     }
     
     return 0;

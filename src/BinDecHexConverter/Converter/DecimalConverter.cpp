@@ -6,6 +6,26 @@ using namespace std;
 
 namespace NumberBaseConverter
 {
+    string DecimalConverter::ConvertToBinary(string decStr)
+    {
+        int number;
+        stringstream ss;
+        ss << std::dec << decStr;
+        ss >> number;
+        
+        return convertToBinary(number);
+    } // end method
+    
+    string DecimalConverter::ConvertToHexadecimal(string decStr)
+    {
+        int number;
+        stringstream ss;
+        ss << std::dec << decStr;
+        ss >> number;
+        
+        return convertToHexadecimal(number);
+    } // end method    
+    
     string DecimalConverter::convertToBinary(int number)
     {
         string binRep("");
@@ -19,16 +39,6 @@ namespace NumberBaseConverter
         binRep.append(temp);
         
         return binRep;
-    }
-    
-    string DecimalConverter::ConvertToBinary(string decStr)
-    {
-        int number;
-        stringstream ss;
-        ss << std::dec << decStr;
-        ss >> number;
-        
-        return convertToBinary(number);
     } // end method
     
     string DecimalConverter::convertToHexadecimal(int number)
@@ -45,14 +55,4 @@ namespace NumberBaseConverter
         
         return hexRep;
     } // end method
-    
-    string DecimalConverter::ConvertToHexadecimal(string decStr)
-    {
-        int number;
-        stringstream ss;
-        ss << std::dec << decStr;
-        ss >> number;
-        
-        return convertToHexadecimal(number);
-    } // end method    
 } // end namespace

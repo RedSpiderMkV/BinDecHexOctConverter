@@ -5,7 +5,8 @@
  * Created on 11 November 2015, 21:38
  */
 
-#include<iostream>
+#include <iostream>
+#include <string>
 #include "Converter/DecimalConverter.h"
 #include "Converter/HexadecimalConverter.h"
 
@@ -21,8 +22,9 @@ int main(int argc, char* argv[])
     DecimalConverter newConverter;
     HexadecimalConverter hexConverter;
     
-    int input = 0;
-    while(input > -1)
+    //int input = 0;
+    string input = "0";
+    while(input != "-1")
     {
         cin >> input;
         //cout << newConverter.ConvertToBinary(input) << endl;

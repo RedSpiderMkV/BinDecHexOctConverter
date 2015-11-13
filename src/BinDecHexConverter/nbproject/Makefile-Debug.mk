@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/2115372132/DecimalConverter.o \
 	${OBJECTDIR}/_ext/2115372132/HexadecimalConverter.o \
+	${OBJECTDIR}/Converter/BinaryConverter.o \
 	${OBJECTDIR}/main.o
 
 
@@ -73,6 +74,11 @@ ${OBJECTDIR}/_ext/2115372132/HexadecimalConverter.o: /home/nikeah/Git/BinDecHexC
 	${MKDIR} -p ${OBJECTDIR}/_ext/2115372132
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/2115372132/HexadecimalConverter.o /home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.cpp
+
+${OBJECTDIR}/Converter/BinaryConverter.o: Converter/BinaryConverter.cpp 
+	${MKDIR} -p ${OBJECTDIR}/Converter
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Converter/BinaryConverter.o Converter/BinaryConverter.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -26,11 +26,11 @@ int main(int argc, char* argv[])
     while(input != "-1")
     {
         cin >> input;
-        cout << newConverter.ConvertToBinary(input) << "\t";
-        cout << newConverter.ConvertToHexadecimal(input) << endl;
+        //cout << newConverter.ConvertToBinary(input) << "\t";
+        //cout << newConverter.ConvertToHexadecimal(input) << endl;
         
         cout << hexConverter.ConvertToBinary(input) << "\t";
-        cout << hexConverter.ConvertToDecimal(input) << endl;
+        //cout << hexConverter.ConvertToDecimal(input) << endl;
     }
     
     return 0;

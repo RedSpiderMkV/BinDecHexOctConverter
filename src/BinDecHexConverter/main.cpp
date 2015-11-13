@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
         //cout << newConverter.ConvertToHexadecimal(input) << endl;
         
         cout << hexConverter.ConvertToBinary(input) << "\t";
-        //cout << hexConverter.ConvertToDecimal(input) << endl;
+        cout << hexConverter.ConvertToDecimal(input) << endl;
     }
     
     return 0;

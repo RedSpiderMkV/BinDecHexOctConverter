@@ -8,7 +8,12 @@ namespace NumberBaseConverter
 {
     string HexadecimalConverter::ConvertToBinary(string number)
     {
-        return decimalConverter_m.ConvertToBinary(number);
+        int hexNum = parseIntFromString(number);
+        
+        char temp[32];
+        sprintf(temp, "%d", hexNum);
+        
+        return decimalConverter_m.ConvertToBinary(temp);
     } // end method
     
     string HexadecimalConverter::ConvertToDecimal(string number)

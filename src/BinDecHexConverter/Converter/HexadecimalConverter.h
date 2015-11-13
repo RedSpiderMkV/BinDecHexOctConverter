@@ -19,6 +19,8 @@ namespace NumberBaseConverter
     {
         private:
             DecimalConverter decimalConverter_m;
+            
+            int parseIntFromString(string number);
         public:
             string ConvertToDecimal(string number);
             string ConvertToBinary(string number);

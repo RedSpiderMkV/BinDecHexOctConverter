@@ -8,21 +8,13 @@ namespace NumberBaseConverter
 {
     string DecimalConverter::ConvertToBinary(string decStr)
     {
-        int number;
-        stringstream ss;
-        ss << std::dec << decStr;
-        ss >> number;
-        
+        int number = parseIntFromString(decStr);
         return convertToBinary(number);
     } // end method
     
     string DecimalConverter::ConvertToHexadecimal(string decStr)
     {
-        int number;
-        stringstream ss;
-        ss << std::dec << decStr;
-        ss >> number;
-        
+        int number = parseIntFromString(decStr);
         return convertToHexadecimal(number);
     } // end method    
     
@@ -54,5 +46,15 @@ namespace NumberBaseConverter
         hexRep.append(temp);
         
         return hexRep;
+    } // end method
+    
+    int DecimalConverter::parseIntFromString(string number)
+    {
+        int decNumber;
+        stringstream ss;
+        ss << std::dec << number;
+        ss >> decNumber;
+        
+        return decNumber;
     } // end method
 } // end namespace

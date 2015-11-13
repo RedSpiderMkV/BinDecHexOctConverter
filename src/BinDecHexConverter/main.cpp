@@ -22,16 +22,15 @@ int main(int argc, char* argv[])
     DecimalConverter newConverter;
     HexadecimalConverter hexConverter;
     
-    //int input = 0;
     string input = "0";
     while(input != "-1")
     {
         cin >> input;
-        cout << newConverter.ConvertToBinary(input) << endl;
+        cout << newConverter.ConvertToBinary(input) << "\t";
         cout << newConverter.ConvertToHexadecimal(input) << endl;
         
-        //cout << hexConverter.ConvertToBinary(input) << endl;
-        //cout << hexConverter.ConvertToDecimal(input) << endl;
+        cout << hexConverter.ConvertToBinary(input) << "\t";
+        cout << hexConverter.ConvertToDecimal(input) << endl;
     }
     
     return 0;

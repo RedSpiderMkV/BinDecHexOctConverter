@@ -16,6 +16,7 @@ namespace NumberBaseConverter
     class DecimalConverter
     {
         private:
+            int parseIntFromString(string number);
             string convertToBinary(int number);
             string convertToHexadecimal(int number);
         public:

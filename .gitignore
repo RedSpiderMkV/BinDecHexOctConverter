@@ -5,3 +5,5 @@
 /src/BinDecHexConverter/dist/
 
 *-Release*
+
+*.mk

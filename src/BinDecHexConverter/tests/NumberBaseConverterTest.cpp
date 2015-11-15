@@ -7,34 +7,150 @@
 
 #include <stdlib.h>
 #include <iostream>
+#include <string>
+#include "Converter/DecimalConverter.h"
+#include "Converter/HexadecimalConverter.h"
+#include "Converter/BinaryConverter.h"
+
+using namespace std;
+using namespace NumberBaseConverter;
 
 /*
  * Simple C++ Test Suite
  */
 
-void test1() {
-    std::cout << "NumberBaseConverterTest test 1" << std::endl;
+void printTestResults(string testState, string name, string message)
+{
+    cout << testState + " time=0 testname=" + name + " (NumberBaseConverterTest) message=" + message << endl;
+} // end method
+
+void testDecimalToBinaryConversion_Dec10()
+{
+    cout << "%TEST_STARTED% testDecimalToBinaryConversion_Dec10 (NumberBaseConverterTest)" << endl;
+    
+    string decimalNum = "10";
+    string expectedOutput = "1010";
+    DecimalConverter decimalConverter;
+    
+    if(expectedOutput != decimalConverter.ConvertToBinary(decimalNum))
+    {
+        printTestResults("%TEST_FAILED%", "testDecimalToBinaryConversion_Dec10", "test error message");
+    } // end if
+    
+    cout << "%TEST_FINISHED% time=0 testDecimalToBinaryConversion_Dec10 (NumberBaseConverterTest)" << endl;
+} // end method
+
+void testDecimalToBinaryConversion_Dec15()
+{
+    cout << "%TEST_STARTED% testDecimalToBinaryConversion_Dec15 (NumberBaseConverterTest)" << endl;
+    
+    string decimalNum = "15";
+    string expectedOutput = "1111";
+    DecimalConverter decimalConverter;
+    
+    if(expectedOutput != decimalConverter.ConvertToBinary(decimalNum))
+    {
+        printTestResults("%TEST_FAILED%", "testDecimalToBinaryConversion_Dec15", "test error message");
+    } // end if
+    
+    cout << "%TEST_FINISHED% time=0 testDecimalToBinaryConversion_Dec15 (NumberBaseConverterTest)" << endl;
 }
 
-void test2() {
-    std::cout << "NumberBaseConverterTest test 2" << std::endl;
-    std::cout << "%TEST_FAILED% time=0 testname=test2 (NumberBaseConverterTest) message=error message sample" << std::endl;
+void testDecimalToHexConversion_Dec15()
+{
+    cout << "%TEST_STARTED% testDecimalToHexConversion_Dec15 (NumberBaseConverterTest)" << endl;
+    
+    string decimalNum = "15";
+    string expectedOutput = "f";
+    DecimalConverter decimalConverter;
+    
+    if(expectedOutput != decimalConverter.ConvertToHexadecimal(decimalNum))
+    {
+        printTestResults("%TEST_FAILED%", "testDecimalToHexConversion_Dec15", "test error message");
+    } // end if
+    
+    cout << "%TEST_FINISHED% time=0 testDecimalToHexConversion_Dec15 (NumberBaseConverterTest)" << endl;
 }
 
-int main(int argc, char** argv) {
+void testHexadecimalToDecimalConversion_HexA()
+{
+    cout << "%TEST_STARTED% testHexadecimalToDecimalConversion_HexA (NumberBaseConverterTest)" << endl;
+    
+    string hexNum = "a";
+    string expectedOutput = "10";
+    HexadecimalConverter hexConverter;
+    
+    if(expectedOutput != hexConverter.ConvertToDecimal(hexNum))
+    {
+        printTestResults("%TEST_FAILED%", "testHexadecimalToDecimalConversion_HexA", "test error message");
+    } // end if
+    
+    cout << "%TEST_FINISHED% time=0 testHexadecimalToDecimalConversion_HexA (NumberBaseConverterTest)" << endl;
+}
+
+void testHexadecimalToBinaryConversion_HexA()
+{
+    cout << "%TEST_STARTED% testHexadecimalToBinaryConversion_HexA (NumberBaseConverterTest)" << endl;
+    
+    string hexNum = "a";
+    string expectedOutput = "1010";
+    HexadecimalConverter hexConverter;
+    
+    if(expectedOutput != hexConverter.ConvertToBinary(hexNum))
+    {
+        printTestResults("%TEST_FAILED%", "testHexadecimalToBinaryConversion_HexA", "test error message");
+    } // end if
+    
+    cout << "%TEST_FINISHED% time=0 testHexadecimalToBinaryConversion_HexA (NumberBaseConverterTest)" << endl;
+}
+
+void testBinaryToDecimalConversion_Bin1010()
+{
+    cout << "%TEST_STARTED% testBinaryToDecimalConversion_Bin1010 (NumberBaseConverterTest)" << endl;
+    
+    string binNum = "1010";
+    string expectedOutput = "10";
+    BinaryConverter binConverter;
+    
+    if(expectedOutput != binConverter.ConvertToDecimal(binNum))
+    {
+        printTestResults("%TEST_FAILED%", "testBinaryToDecimalConversion_Bin1010", "test error message");
+    } // end if
+    
+    cout << "%TEST_FINISHED% time=0 testBinaryToDecimalConversion_Bin1010 (NumberBaseConverterTest)" << endl;
+} // end method
+
+void testBinaryToHexadecimalConversion_Bin1010()
+{
+    cout << "%TEST_STARTED% testBinaryToHexadecimalConversion_Bin1010 (NumberBaseConverterTest)" << endl;
+    
+    string binNum = "1010";
+    string expectedOutput = "a";
+    BinaryConverter binConverter;
+    
+    if(expectedOutput != binConverter.ConvertToHexadecimal(binNum))
+    {
+        printTestResults("%TEST_FAILED%", "testBinaryToHexadecimalConversion_Bin1010", "test error message");
+    } // end if
+    
+    cout << "%TEST_FINISHED% time=0 testBinaryToHexadecimalConversion_Bin1010 (NumberBaseConverterTest)" << endl;
+} // end method
+
+int main(int argc, char** argv)
+{
     std::cout << "%SUITE_STARTING% NumberBaseConverterTest" << std::endl;
     std::cout << "%SUITE_STARTED%" << std::endl;
 
-    std::cout << "%TEST_STARTED% test1 (NumberBaseConverterTest)" << std::endl;
-    test1();
-    std::cout << "%TEST_FINISHED% time=0 test1 (NumberBaseConverterTest)" << std::endl;
-
-    std::cout << "%TEST_STARTED% test2 (NumberBaseConverterTest)\n" << std::endl;
-    test2();
-    std::cout << "%TEST_FINISHED% time=0 test2 (NumberBaseConverterTest)" << std::endl;
+    testDecimalToBinaryConversion_Dec15();
+    testDecimalToHexConversion_Dec15();
+    
+    testHexadecimalToBinaryConversion_HexA();
+    testHexadecimalToDecimalConversion_HexA();
+    
+    testBinaryToDecimalConversion_Bin1010();
+    testBinaryToHexadecimalConversion_Bin1010();
 
     std::cout << "%SUITE_FINISHED% time=0" << std::endl;
 
     return (EXIT_SUCCESS);
 }
-

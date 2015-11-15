@@ -16,7 +16,7 @@ using namespace std;
 
 namespace NumberBaseConverter
 {
-    class HexadecimalConverter : ConverterBase
+    class HexadecimalConverter : public ConverterBase
     {
         private:
             DecimalConverter decimalConverter_m;

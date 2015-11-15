@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <string>
+#include "Converter/ConverterBase.h"
 #include "Converter/DecimalConverter.h"
 #include "Converter/HexadecimalConverter.h"
 #include "Converter/BinaryConverter.h"
@@ -67,8 +68,6 @@ int main(int argc, char* argv[])
     DecimalConverter newConverter;
     HexadecimalConverter hexConverter;
     BinaryConverter binConverter;
-    
-    
     
     return 0;
 } // end method

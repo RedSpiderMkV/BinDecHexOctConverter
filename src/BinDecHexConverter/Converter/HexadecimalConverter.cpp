@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <sstream>
 #include "HexadecimalConverter.h"
+
 using namespace std;
 
 namespace NumberBaseConverter

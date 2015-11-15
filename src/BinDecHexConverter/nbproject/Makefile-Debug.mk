@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/2115372132/DecimalConverter.o \
 	${OBJECTDIR}/_ext/2115372132/HexadecimalConverter.o \
 	${OBJECTDIR}/Converter/BinaryConverter.o \
+	${OBJECTDIR}/Converter/ConverterBase.o \
 	${OBJECTDIR}/main.o
 
 # Test Directory
@@ -85,6 +86,11 @@ ${OBJECTDIR}/Converter/BinaryConverter.o: Converter/BinaryConverter.cpp
 	${MKDIR} -p ${OBJECTDIR}/Converter
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Converter/BinaryConverter.o Converter/BinaryConverter.cpp
+
+${OBJECTDIR}/Converter/ConverterBase.o: Converter/ConverterBase.cpp 
+	${MKDIR} -p ${OBJECTDIR}/Converter
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Converter/ConverterBase.o Converter/ConverterBase.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -144,6 +150,19 @@ ${OBJECTDIR}/Converter/BinaryConverter_nomain.o: ${OBJECTDIR}/Converter/BinaryCo
 	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Converter/BinaryConverter_nomain.o Converter/BinaryConverter.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Converter/BinaryConverter.o ${OBJECTDIR}/Converter/BinaryConverter_nomain.o;\
+	fi
+
+${OBJECTDIR}/Converter/ConverterBase_nomain.o: ${OBJECTDIR}/Converter/ConverterBase.o Converter/ConverterBase.cpp 
+	${MKDIR} -p ${OBJECTDIR}/Converter
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/Converter/ConverterBase.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Converter/ConverterBase_nomain.o Converter/ConverterBase.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/Converter/ConverterBase.o ${OBJECTDIR}/Converter/ConverterBase_nomain.o;\
 	fi
 
 ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp 

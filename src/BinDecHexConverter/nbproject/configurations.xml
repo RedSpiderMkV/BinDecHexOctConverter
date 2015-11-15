@@ -5,9 +5,9 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Converter/BinaryConverter.h</itemPath>
+      <itemPath>Converter/ConverterBase.h</itemPath>
       <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.h</itemPath>
       <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.h</itemPath>
-      <itemPath>Converter/IBaseConverter.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -17,6 +17,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>Converter/BinaryConverter.cpp</itemPath>
+      <itemPath>Converter/ConverterBase.cpp</itemPath>
       <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.cpp</itemPath>
       <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -81,7 +82,9 @@
       </item>
       <item path="Converter/BinaryConverter.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Converter/IBaseConverter.h" ex="false" tool="3" flavor2="0">
+      <item path="Converter/ConverterBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Converter/ConverterBase.h" ex="false" tool="3" flavor2="0">
       </item>
       <folder path="TestFiles/f1">
         <cTool>
@@ -150,7 +153,9 @@
       </item>
       <item path="Converter/BinaryConverter.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Converter/IBaseConverter.h" ex="false" tool="3" flavor2="0">
+      <item path="Converter/ConverterBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Converter/ConverterBase.h" ex="false" tool="3" flavor2="0">
       </item>
       <folder path="TestFiles/f1">
         <cTool>

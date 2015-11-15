@@ -10,12 +10,13 @@
 
 #include <string>
 #include "DecimalConverter.h"
+#include "ConverterBase.h"
 
 using namespace std;
 
 namespace NumberBaseConverter
 {
-    class BinaryConverter
+    class BinaryConverter : public ConverterBase
     {
         private:
             DecimalConverter decimalConverter_m;

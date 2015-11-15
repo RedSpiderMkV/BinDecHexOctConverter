@@ -9,11 +9,13 @@
 #define	DECIMALCONVERTER_H
 
 #include<string>
+#include "ConverterBase.h"
+
 using namespace std;
 
 namespace NumberBaseConverter
 {
-    class DecimalConverter
+    class DecimalConverter : public ConverterBase
     {
         private:
             int parseIntFromString(string number);

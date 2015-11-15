@@ -9,8 +9,8 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux-x86
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
-CND_ARTIFACT_NAME_Debug=bindechexconverter
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/bindechexconverter
+CND_ARTIFACT_NAME_Debug=BinDecHexConverter
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/BinDecHexConverter
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
 CND_PACKAGE_NAME_Debug=bindechexconverter.tar
 CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/bindechexconverter.tar

@@ -13,30 +13,62 @@
 
 using namespace std;
 using namespace NumberBaseConverter;
-/*
- * 
- */
+
+bool argumentCountValid(int argc)
+{
+    if(argc != 4)
+    {
+        cout << "Incorrect usage.  Usage:" << endl;
+        cout << "bindechexconverter dec hex 10" << endl << endl;
+        
+        return false;
+    } // end if
+    
+    return true;
+} // end method
+
+bool inputBaseValid(string inputBase)
+{
+    if(inputBase != "dec" && inputBase != "hex" && inputBase != "bin")
+    {
+        cout << "Specified input base is unrecognised: " << inputBase << endl;
+        cout << "Can be dec, hex or bin" << endl << endl;
+        
+        return false;
+    } // end if
+    
+    return true;
+} // end method
+
+bool outputBaseValid(string outputBase)
+{
+    if(outputBase != "dec" && outputBase != "hex" && outputBase != "bin")
+    {
+        cout << "Specified output base is unrecognised: " << outputBase << endl;
+        cout << "Can be dec, hex or bin" << endl << endl;
+        
+        return false;
+    } // end if
+    
+    return true;
+} // end method
+
 int main(int argc, char* argv[])
 {
-    cout << "Hello world!" << endl;
+    if(!argumentCountValid(argc)
+            || !inputBaseValid(string(argv[1]))
+            || !outputBaseValid(string(argv[2])))
+    {
+        cout << "Conversion failed, exiting" << endl;
+        
+        return -1;
+    } // end if
     
     DecimalConverter newConverter;
     HexadecimalConverter hexConverter;
     BinaryConverter binConverter;
     
-    string input = "0";
-    while(input != "-1")
-    {
-        cin >> input;
-        //cout << newConverter.ConvertToBinary(input) << "\t";
-        //cout << newConverter.ConvertToHexadecimal(input) << endl;
-        
-        //cout << hexConverter.ConvertToBinary(input) << "\t";
-        //cout << hexConverter.ConvertToDecimal(input) << endl;
-        
-        cout << binConverter.ConvertToDecimal(input) << "\t";
-        cout << binConverter.ConvertToHexadecimal(input) << endl;
-    }
+    
     
     return 0;
 } // end method

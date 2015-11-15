@@ -7,7 +7,7 @@
 using namespace std;
 
 namespace NumberBaseConverter
-{
+{   
     string BinaryConverter::ConvertToDecimal(string number)
     {
         char *end;
@@ -17,5 +17,11 @@ namespace NumberBaseConverter
         sprintf(temp2, "%d", temp);
         
         return temp2;
+    } // end method
+    
+    string BinaryConverter::ConvertToHexadecimal(string number)
+    {
+        string decimalNumber = ConvertToDecimal(number);
+        return decimalConverter_m.ConvertToHexadecimal(decimalNumber);
     } // end method
 } // end namespace

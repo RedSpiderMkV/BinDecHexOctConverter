@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/2115372132/HexadecimalConverter.o \
 	${OBJECTDIR}/Converter/BinaryConverter.o \
 	${OBJECTDIR}/Converter/ConverterBase.o \
+	${OBJECTDIR}/NumberBaseConverterFactory.o \
 	${OBJECTDIR}/main.o
 
 # Test Directory
@@ -91,6 +92,11 @@ ${OBJECTDIR}/Converter/ConverterBase.o: Converter/ConverterBase.cpp
 	${MKDIR} -p ${OBJECTDIR}/Converter
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Converter/ConverterBase.o Converter/ConverterBase.cpp
+
+${OBJECTDIR}/NumberBaseConverterFactory.o: NumberBaseConverterFactory.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/NumberBaseConverterFactory.o NumberBaseConverterFactory.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -163,6 +169,19 @@ ${OBJECTDIR}/Converter/ConverterBase_nomain.o: ${OBJECTDIR}/Converter/ConverterB
 	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Converter/ConverterBase_nomain.o Converter/ConverterBase.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Converter/ConverterBase.o ${OBJECTDIR}/Converter/ConverterBase_nomain.o;\
+	fi
+
+${OBJECTDIR}/NumberBaseConverterFactory_nomain.o: ${OBJECTDIR}/NumberBaseConverterFactory.o NumberBaseConverterFactory.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/NumberBaseConverterFactory.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/NumberBaseConverterFactory_nomain.o NumberBaseConverterFactory.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/NumberBaseConverterFactory.o ${OBJECTDIR}/NumberBaseConverterFactory_nomain.o;\
 	fi
 
 ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp 

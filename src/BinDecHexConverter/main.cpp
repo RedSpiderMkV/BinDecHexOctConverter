@@ -8,16 +8,10 @@
 #include <iostream>
 #include <string>
 #include "Converter/ConverterBase.h"
-#include "Converter/DecimalConverter.h"
-#include "Converter/HexadecimalConverter.h"
-#include "Converter/BinaryConverter.h"
+#include "NumberBaseConverterFactory.h"
 
 using namespace std;
 using namespace NumberBaseConverter;
-
-DecimalConverter decConverter;
-HexadecimalConverter hexConverter;
-BinaryConverter binConverter;
 
 bool argumentCountValid(int argc)
 {
@@ -58,26 +52,6 @@ bool outputBaseValid(string outputBase)
     return true;
 } // end method
 
-ConverterBase *getRequiredConverter(string converterType)
-{
-    ConverterBase *converter;
-    
-    if(converterType == "bin")
-    {
-        converter = &binConverter;
-    }
-    else if(converterType == "dec")
-    {
-        converter = &decConverter;
-    }
-    else if(converterType == "hex")
-    {
-        converter = &hexConverter;
-    } // end if
-    
-    return converter;
-} // end method
-
 int main(int argc, char* argv[])
 {
     if(!argumentCountValid(argc)
@@ -89,7 +63,10 @@ int main(int argc, char* argv[])
         return -1;
     } // end if
     
-    ConverterBase *converter = getRequiredConverter(string(argv[1]));
+    NumberBaseConverterFactory converterFactory;
+    
+    //ConverterBase *converter = getRequiredConverter(string(argv[1]));
+    ConverterBase *converter = converterFactory.GetConverter(string(argv[1]));
     
     if(string(argv[2]) == "dec")
     {
@@ -106,4 +83,3 @@ int main(int argc, char* argv[])
     
     return 0;
 } // end method
-

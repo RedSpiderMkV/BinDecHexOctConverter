@@ -15,6 +15,10 @@
 using namespace std;
 using namespace NumberBaseConverter;
 
+DecimalConverter decConverter;
+HexadecimalConverter hexConverter;
+BinaryConverter binConverter;
+
 bool argumentCountValid(int argc)
 {
     if(argc != 4)
@@ -54,6 +58,26 @@ bool outputBaseValid(string outputBase)
     return true;
 } // end method
 
+ConverterBase *getRequiredConverter(string converterType)
+{
+    ConverterBase *converter;
+    
+    if(converterType == "bin")
+    {
+        converter = &binConverter;
+    }
+    else if(converterType == "dec")
+    {
+        converter = &decConverter;
+    }
+    else if(converterType == "hex")
+    {
+        converter = &hexConverter;
+    } // end if
+    
+    return converter;
+} // end method
+
 int main(int argc, char* argv[])
 {
     if(!argumentCountValid(argc)
@@ -65,9 +89,20 @@ int main(int argc, char* argv[])
         return -1;
     } // end if
     
-    DecimalConverter newConverter;
-    HexadecimalConverter hexConverter;
-    BinaryConverter binConverter;
+    ConverterBase *converter = getRequiredConverter(string(argv[1]));
+    
+    if(string(argv[2]) == "dec")
+    {
+        cout << converter->ConvertToDecimal(string(argv[3])) << endl;
+    }
+    else if(string(argv[2]) == "hex")
+    {
+        cout << converter->ConvertToHexadecimal(string(argv[3])) << endl;
+    }
+    else if(string(argv[2]) == "bin")
+    {
+        cout << converter->ConvertToBinary(string(argv[3])) << endl;
+    } // end if
     
     return 0;
 } // end method

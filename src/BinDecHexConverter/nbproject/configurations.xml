@@ -7,6 +7,7 @@
       <itemPath>Converter/BinaryConverter.h</itemPath>
       <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.h</itemPath>
       <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.h</itemPath>
+      <itemPath>Converter/IBaseConverter.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -80,6 +81,8 @@
       </item>
       <item path="Converter/BinaryConverter.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Converter/IBaseConverter.h" ex="false" tool="3" flavor2="0">
+      </item>
       <folder path="TestFiles/f1">
         <cTool>
           <incDir>
@@ -146,6 +149,8 @@
       <item path="Converter/BinaryConverter.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Converter/BinaryConverter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Converter/IBaseConverter.h" ex="false" tool="3" flavor2="0">
       </item>
       <folder path="TestFiles/f1">
         <cTool>

@@ -40,6 +40,12 @@ OBJECTFILES= \
 	${OBJECTDIR}/Converter/BinaryConverter.o \
 	${OBJECTDIR}/main.o
 
+# Test Directory
+TESTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tests
+
+# Test Files
+TESTFILES= \
+	${TESTDIR}/TestFiles/f1
 
 # C Compiler Flags
 CFLAGS=
@@ -87,6 +93,80 @@ ${OBJECTDIR}/main.o: main.cpp
 
 # Subprojects
 .build-subprojects:
+
+# Build Test Targets
+.build-tests-conf: .build-conf ${TESTFILES}
+${TESTDIR}/TestFiles/f1: ${TESTDIR}/_ext/1832390205/NumberBaseConverterTest.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p ${TESTDIR}/TestFiles
+	${LINK.cc}   -o ${TESTDIR}/TestFiles/f1 $^ ${LDLIBSOPTIONS} 
+
+
+${TESTDIR}/_ext/1832390205/NumberBaseConverterTest.o: /home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/tests/NumberBaseConverterTest.cpp 
+	${MKDIR} -p ${TESTDIR}/_ext/1832390205
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I. -MMD -MP -MF "$@.d" -o ${TESTDIR}/_ext/1832390205/NumberBaseConverterTest.o /home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/tests/NumberBaseConverterTest.cpp
+
+
+${OBJECTDIR}/_ext/2115372132/DecimalConverter_nomain.o: ${OBJECTDIR}/_ext/2115372132/DecimalConverter.o /home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/2115372132
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/_ext/2115372132/DecimalConverter.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/2115372132/DecimalConverter_nomain.o /home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/_ext/2115372132/DecimalConverter.o ${OBJECTDIR}/_ext/2115372132/DecimalConverter_nomain.o;\
+	fi
+
+${OBJECTDIR}/_ext/2115372132/HexadecimalConverter_nomain.o: ${OBJECTDIR}/_ext/2115372132/HexadecimalConverter.o /home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/2115372132
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/_ext/2115372132/HexadecimalConverter.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/2115372132/HexadecimalConverter_nomain.o /home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/_ext/2115372132/HexadecimalConverter.o ${OBJECTDIR}/_ext/2115372132/HexadecimalConverter_nomain.o;\
+	fi
+
+${OBJECTDIR}/Converter/BinaryConverter_nomain.o: ${OBJECTDIR}/Converter/BinaryConverter.o Converter/BinaryConverter.cpp 
+	${MKDIR} -p ${OBJECTDIR}/Converter
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/Converter/BinaryConverter.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Converter/BinaryConverter_nomain.o Converter/BinaryConverter.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/Converter/BinaryConverter.o ${OBJECTDIR}/Converter/BinaryConverter_nomain.o;\
+	fi
+
+${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/main.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_nomain.o main.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/main.o ${OBJECTDIR}/main_nomain.o;\
+	fi
+
+# Run Test Targets
+.test-conf:
+	@if [ "${TEST}" = "" ]; \
+	then  \
+	    ${TESTDIR}/TestFiles/f1 || true; \
+	else  \
+	    ./${TEST} || true; \
+	fi
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}

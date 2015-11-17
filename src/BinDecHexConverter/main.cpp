@@ -17,8 +17,8 @@ bool argumentCountValid(int argc)
 {
     if(argc != 3)
     {
-        cout << "Incorrect usage.  Usage:" << endl;
-        cout << "bindechexconverter dec hex 10" << endl << endl;
+        cout << "Incorrect usage.  Example Usage:" << endl;
+        cout << "BinDecHexConverter bin 1010" << endl << endl;
         
         return false;
     } // end if

@@ -15,7 +15,7 @@ using namespace NumberBaseConverter;
 
 bool argumentCountValid(int argc)
 {
-    if(argc != 4)
+    if(argc != 3)
     {
         cout << "Incorrect usage.  Usage:" << endl;
         cout << "bindechexconverter dec hex 10" << endl << endl;
@@ -39,24 +39,9 @@ bool inputBaseValid(string inputBase)
     return true;
 } // end method
 
-bool outputBaseValid(string outputBase)
-{
-    if(outputBase != "dec" && outputBase != "hex" && outputBase != "bin")
-    {
-        cout << "Specified output base is unrecognised: " << outputBase << endl;
-        cout << "Can be dec, hex or bin" << endl << endl;
-        
-        return false;
-    } // end if
-    
-    return true;
-} // end method
-
 int main(int argc, char* argv[])
 {
-    if(!argumentCountValid(argc)
-            || !inputBaseValid(string(argv[1]))
-            || !outputBaseValid(string(argv[2])))
+    if(!argumentCountValid(argc) || !inputBaseValid(string(argv[1])))
     {
         cout << "Conversion failed, exiting" << endl;
         
@@ -64,22 +49,11 @@ int main(int argc, char* argv[])
     } // end if
     
     NumberBaseConverterFactory converterFactory;
-    
-    //ConverterBase *converter = getRequiredConverter(string(argv[1]));
     ConverterBase *converter = converterFactory.GetConverter(string(argv[1]));
     
-    if(string(argv[2]) == "dec")
-    {
-        cout << converter->ConvertToDecimal(string(argv[3])) << endl;
-    }
-    else if(string(argv[2]) == "hex")
-    {
-        cout << converter->ConvertToHexadecimal(string(argv[3])) << endl;
-    }
-    else if(string(argv[2]) == "bin")
-    {
-        cout << converter->ConvertToBinary(string(argv[3])) << endl;
-    } // end if
+    cout << "Dec\t" << converter->ConvertToDecimal(string(argv[2])) << endl;
+    cout << "Hex\t" << converter->ConvertToHexadecimal(string(argv[2])) << endl;
+    cout << "Bin\t" << converter->ConvertToBinary(string(argv[2])) << endl;
     
     return 0;
 } // end method

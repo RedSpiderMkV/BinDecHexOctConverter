@@ -26,7 +26,7 @@ namespace NumberBaseConverter
             binRep.append(convertToBinary(number / 2));
         } // end if
         
-        char temp[1];
+        char temp[2];
         sprintf(temp, "%d", number % 2);
         binRep.append(temp);
         
@@ -41,7 +41,7 @@ namespace NumberBaseConverter
             hexRep.append(convertToHexadecimal(number / 16));
         } // end if
         
-        char temp[1];
+        char temp[2];
         sprintf(temp, "%x", number % 16);
         hexRep.append(temp);
         

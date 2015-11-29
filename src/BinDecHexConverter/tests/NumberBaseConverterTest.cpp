@@ -13,6 +13,8 @@
 #include "Converter/HexadecimalConverter.h"
 #include "Converter/BinaryConverter.h"
 
+#include "NumberBaseConverterTest.h"
+
 using namespace std;
 using namespace NumberBaseConverter;
 
@@ -169,7 +171,7 @@ void testBinaryToBinaryConversion_Bin1010()
     cout << "%TEST_FINISHED% time=0 testBinaryToBinaryConversion_Bin1010 (NumberBaseConverterTest)" << endl;
 } // end method
 
-int main(int argc, char** argv)
+/*int main(int argc, char** argv)
 {
     std::cout << "%SUITE_STARTING% NumberBaseConverterTest" << std::endl;
     std::cout << "%SUITE_STARTED%" << std::endl;
@@ -189,4 +191,4 @@ int main(int argc, char** argv)
     std::cout << "%SUITE_FINISHED% time=0" << std::endl;
 
     return (EXIT_SUCCESS);
-}
+}*/

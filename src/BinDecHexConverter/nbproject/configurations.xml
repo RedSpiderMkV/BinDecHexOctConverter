@@ -4,10 +4,12 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>Converter/BinaryConverter.h</itemPath>
-      <itemPath>Converter/ConverterBase.h</itemPath>
-      <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.h</itemPath>
-      <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.h</itemPath>
+      <logicalFolder name="f1" displayName="Converter" projectFiles="true">
+        <itemPath>Converter/BinaryConverter.h</itemPath>
+        <itemPath>Converter/ConverterBase.h</itemPath>
+        <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.h</itemPath>
+        <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.h</itemPath>
+      </logicalFolder>
       <itemPath>NumberBaseConverterFactory.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -17,10 +19,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Converter/BinaryConverter.cpp</itemPath>
-      <itemPath>Converter/ConverterBase.cpp</itemPath>
-      <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.cpp</itemPath>
-      <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.cpp</itemPath>
+      <logicalFolder name="f1" displayName="Converter" projectFiles="true">
+        <itemPath>Converter/BinaryConverter.cpp</itemPath>
+        <itemPath>Converter/ConverterBase.cpp</itemPath>
+        <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.cpp</itemPath>
+        <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.cpp</itemPath>
+      </logicalFolder>
       <itemPath>NumberBaseConverterFactory.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -33,6 +37,8 @@
                      projectFiles="true"
                      kind="TEST">
         <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/tests/NumberBaseConverterTest.cpp</itemPath>
+        <itemPath>tests/NumberBaseConverterTest.h</itemPath>
+        <itemPath>tests/TestMain.cpp</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -109,6 +115,10 @@
       </folder>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="tests/NumberBaseConverterTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/TestMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
@@ -183,6 +193,10 @@
         </linkerTool>
       </folder>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/NumberBaseConverterTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/TestMain.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

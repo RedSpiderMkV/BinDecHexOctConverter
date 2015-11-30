@@ -12,7 +12,7 @@ Navigate to where Makefile is and run make?
 Can't be more helpful unfortunately, Netbeans takes care of all my build issues, load the project, hit F11 :)
 
 
-Run Tests
+Unit Tests
 ---------
 
 Using Netbeans, Alt-F6 will run the unit tests.

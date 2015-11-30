@@ -23,8 +23,10 @@ Usage
 
 Navigate to output directory
 
+
 Example
 
 BinDecHexConverter hex 20
+
 
 Shows binary and decimal example of hex 20

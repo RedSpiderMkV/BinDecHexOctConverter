@@ -27,4 +27,4 @@ Example
 
 ```BinDecHexConverter hex 20```
 
-Shows binary and decimal example of hex 20
+Shows binary and decimal representation of hex 20

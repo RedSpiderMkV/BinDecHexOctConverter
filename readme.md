@@ -7,11 +7,11 @@ Small tool to convert between binary, decimal and hexadecimal numbers.
 Build Instructions
 ------------------
 
-```git clone https://github.com/RedSpiderMkV/BinDecHexConverter
-
+```
+git clone https://github.com/RedSpiderMkV/BinDecHexConverter
 cd BinDecHexConverter
-
-make```
+make
+```
 
 Can't be more helpful unfortunately, Netbeans takes care of all my build issues, load the project, hit F11 :)
 

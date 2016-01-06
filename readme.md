@@ -31,4 +31,4 @@ Example
 
 ```BinDecHexConverter hex 20```
 
-Shows binary and decimal representation of hex 20
+Shows binary, decimal and hex representation of 0x20

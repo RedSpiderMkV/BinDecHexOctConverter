@@ -7,21 +7,21 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=GNU-Linux-x86
-CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
-CND_ARTIFACT_NAME_Debug=BinDecHexConverter
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/BinDecHexConverter
-CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
+CND_PLATFORM_Debug=GNU-Linux
+CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
+CND_ARTIFACT_NAME_Debug=bdhconverter
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/bdhconverter
+CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
 CND_PACKAGE_NAME_Debug=bindechexconverter.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/bindechexconverter.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/bindechexconverter.tar
 # Release configuration
-CND_PLATFORM_Release=GNU-Linux-x86
-CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86
+CND_PLATFORM_Release=GNU-Linux
+CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
 CND_ARTIFACT_NAME_Release=bindechexconverter
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/bindechexconverter
-CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/bindechexconverter
+CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
 CND_PACKAGE_NAME_Release=bindechexconverter.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/bindechexconverter.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/bindechexconverter.tar
 #
 # include compiler specific variables
 #

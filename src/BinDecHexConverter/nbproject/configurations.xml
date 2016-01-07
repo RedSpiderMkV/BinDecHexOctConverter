@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="95">
+<configurationDescriptor version="97">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -7,8 +7,8 @@
       <logicalFolder name="f1" displayName="Converter" projectFiles="true">
         <itemPath>Converter/BinaryConverter.h</itemPath>
         <itemPath>Converter/ConverterBase.h</itemPath>
-        <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.h</itemPath>
-        <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.h</itemPath>
+        <itemPath>Converter/DecimalConverter.h</itemPath>
+        <itemPath>Converter/HexadecimalConverter.h</itemPath>
       </logicalFolder>
       <itemPath>NumberBaseConverterFactory.h</itemPath>
     </logicalFolder>
@@ -22,8 +22,8 @@
       <logicalFolder name="f1" displayName="Converter" projectFiles="true">
         <itemPath>Converter/BinaryConverter.cpp</itemPath>
         <itemPath>Converter/ConverterBase.cpp</itemPath>
-        <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.cpp</itemPath>
-        <itemPath>/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.cpp</itemPath>
+        <itemPath>Converter/DecimalConverter.cpp</itemPath>
+        <itemPath>Converter/HexadecimalConverter.cpp</itemPath>
       </logicalFolder>
       <itemPath>NumberBaseConverterFactory.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -58,29 +58,9 @@
       </toolsSet>
       <compileType>
         <linkerTool>
-          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/BinDecHexConverter</output>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bdhconverter</output>
         </linkerTool>
       </compileType>
-      <item path="/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/tests/NumberBaseConverterTest.cpp"
             ex="false"
             tool="1"
@@ -93,6 +73,14 @@
       <item path="Converter/ConverterBase.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Converter/ConverterBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Converter/DecimalConverter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Converter/DecimalConverter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Converter/HexadecimalConverter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Converter/HexadecimalConverter.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="NumberBaseConverterFactory.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -140,26 +128,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/DecimalConverter.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/Converter/HexadecimalConverter.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/tests/NumberBaseConverterTest.cpp"
             ex="false"
             tool="1"
@@ -172,6 +140,14 @@
       <item path="Converter/ConverterBase.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Converter/ConverterBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Converter/DecimalConverter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Converter/DecimalConverter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Converter/HexadecimalConverter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Converter/HexadecimalConverter.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="NumberBaseConverterFactory.cpp" ex="false" tool="1" flavor2="0">
       </item>

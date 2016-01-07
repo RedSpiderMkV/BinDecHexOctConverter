@@ -58,7 +58,7 @@
       </toolsSet>
       <compileType>
         <linkerTool>
-          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bdhconverter</output>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bdhconvert</output>
         </linkerTool>
       </compileType>
       <item path="/home/nikeah/Git/BinDecHexConverter/src/BinDecHexConverter/tests/NumberBaseConverterTest.cpp"

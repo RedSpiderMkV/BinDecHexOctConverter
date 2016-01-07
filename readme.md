@@ -29,6 +29,6 @@ Navigate to output directory
 
 Example
 
-```BinDecHexConverter hex 20```
+```bdhconverter hex 20```
 
 Shows binary, decimal and hex representation of 0x20

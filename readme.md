@@ -29,7 +29,7 @@ Navigate to output directory
 
 Example
 
-```bdhconvert hex 20```
+```./bdhconvert hex 20```
 
 ![run image](./assets/bdhConvSS.png "Example Run")
 

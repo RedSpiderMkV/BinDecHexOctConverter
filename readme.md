@@ -31,4 +31,6 @@ Example
 
 ```bdhconvert hex 20```
 
+![run image](./assets/bdhConvSS.png "Example Run")
+
 Shows binary, decimal and hex representation of 0x20

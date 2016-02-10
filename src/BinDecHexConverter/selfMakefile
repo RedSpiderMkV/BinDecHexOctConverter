@@ -1,0 +1,18 @@
+
+all: bdhconvert
+#	make -C Converter
+
+bdhconvert: main.o
+	g++ -Wall main.o out/* -o bdhconv
+	rm main.o
+	
+main.o: main.cpp ConvertFactory.o
+	g++ -Wall -c main.cpp -o main.o
+
+ConvertFactory.o:
+	make -C Converter
+	g++ -Wall -c NumberBaseConverterFactory.cpp -o out/ConvertFactory.o
+
+clean:
+	$(RM) -rf out
+	$(RM) *.o

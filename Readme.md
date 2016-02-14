@@ -7,14 +7,19 @@ Small tool to convert between binary, decimal and hexadecimal numbers.
 Build Instructions
 ------------------
 
+Using the netbeans generated makefile:
+
 ```
 git clone https://github.com/RedSpiderMkV/BinDecHexConverter
 cd BinDecHexConverter
 make
 ```
 
-Can't be more helpful unfortunately, Netbeans takes care of all my build issues, load the project, hit F11 :)
+or specify the file, selfMakefile as the input to the make command.
 
+'''
+make -f selfMakefile
+'''
 
 Unit Tests
 ---------

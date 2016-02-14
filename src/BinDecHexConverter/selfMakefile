@@ -3,7 +3,7 @@ all: bdhconvert
 #	make -C Converter
 
 bdhconvert: main.o
-	g++ -Wall main.o out/* -o bdhconv
+	g++ -Wall main.o out/* -o out/bdhconv
 	rm main.o
 	
 main.o: main.cpp ConvertFactory.o

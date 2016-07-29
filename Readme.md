@@ -17,14 +17,14 @@ make
 
 or specify the file, selfMakefile as the input to the make command.
 
-'''
+```
 make -f selfMakefile
-'''
+```
 
 Unit Tests
 ---------
 
-Using Netbeans, Alt-F6 will run the unit tests.
+Unit tests are written for the NetBeans unit testing framework.  Run from within NetBeans.
 
 
 Usage

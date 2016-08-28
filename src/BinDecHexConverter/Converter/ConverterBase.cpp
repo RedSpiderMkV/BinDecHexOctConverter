@@ -19,4 +19,9 @@ namespace NumberBaseConverter
     {
         return number;
     } // end method
+    
+    string ConverterBase::ConvertToOctal(string number)
+    {
+        return number;
+    } // end method
 } // end namespace

@@ -21,6 +21,7 @@ namespace NumberBaseConverter
             virtual string ConvertToBinary(string number);
             virtual string ConvertToDecimal(string number);
             virtual string ConvertToHexadecimal(string number);
+            virtual string ConvertToOctal(string number);
     };
 } // end namespace
 

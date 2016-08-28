@@ -23,6 +23,7 @@ namespace NumberBaseConverter
         public:
             string ConvertToDecimal(string number);
             string ConvertToHexadecimal(string number);
+            string ConvertToOctal(string number);
     };
 } // end namespace
 

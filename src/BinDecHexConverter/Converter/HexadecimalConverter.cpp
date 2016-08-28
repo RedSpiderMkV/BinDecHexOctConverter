@@ -13,6 +13,12 @@ namespace NumberBaseConverter
         return decimalConverter_m.ConvertToBinary(decimalNum);
     } // end method
     
+    string HexadecimalConverter::ConvertToOctal(string number)
+    {
+        string decimalNum = ConvertToDecimal(number);
+        return decimalConverter_m.ConvertToOctal(decimalNum);
+    } // end method
+    
     string HexadecimalConverter::ConvertToDecimal(string number)
     {
         int decimalNum = parseIntFromString(number);

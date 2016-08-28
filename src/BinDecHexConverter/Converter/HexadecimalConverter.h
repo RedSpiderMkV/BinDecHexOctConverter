@@ -25,6 +25,7 @@ namespace NumberBaseConverter
         public:
             string ConvertToDecimal(string number);
             string ConvertToBinary(string number);
+            string ConvertToOctal(string number);
     };
 } // end namespace
 

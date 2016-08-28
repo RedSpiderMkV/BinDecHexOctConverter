@@ -9,9 +9,12 @@ bdhconvert: main.o
 main.o: main.cpp ConvertFactory.o
 	g++ -Wall -c main.cpp -o main.o
 
-ConvertFactory.o:
+ConvertFactory.o: init
 	make -C Converter
 	g++ -Wall -c NumberBaseConverterFactory.cpp -o out/ConvertFactory.o
+
+init:
+	rm -rf out
 
 clean:
 	$(RM) -rf out

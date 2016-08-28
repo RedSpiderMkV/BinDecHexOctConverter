@@ -1,7 +1,7 @@
 
 all: Converter
 
-Converter: BinConverter.o HexConverter.o DecConverter.o ConverterBase.o
+Converter: OctConverter.o BinConverter.o HexConverter.o DecConverter.o ConverterBase.o
 	mkdir -p ../out
 	mv *.o ../out
 
@@ -16,3 +16,6 @@ HexConverter.o: HexadecimalConverter.cpp
 	
 DecConverter.o: DecimalConverter.cpp
 	g++ -Wall -c DecimalConverter.cpp -o DecConverter.o
+
+OctConverter.o: OctalConverter.cpp
+	g++ -Wall -c OctalConverter.cpp -o OctConverter.o

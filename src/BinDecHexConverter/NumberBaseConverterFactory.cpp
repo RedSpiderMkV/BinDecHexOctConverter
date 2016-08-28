@@ -20,6 +20,10 @@ namespace NumberBaseConverter
         else if(converterType == "hex")
         {
             converter = &hexConverter_m;
+        }
+        else if(converterType == "oct")
+        {
+            converter = &octConverter_m;
         } // end if
     
         return converter;

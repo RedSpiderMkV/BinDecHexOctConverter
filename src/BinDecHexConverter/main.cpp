@@ -30,10 +30,10 @@ bool argumentCountValid(int argc)
 
 bool inputBaseValid(string inputBase)
 {
-    if(inputBase != "dec" && inputBase != "hex" && inputBase != "bin")
+    if(inputBase != "dec" && inputBase != "hex" && inputBase != "bin" && inputBase != "oct")
     {
         cout << "Specified input base is unrecognised: " << inputBase << endl;
-        cout << "Can be dec, hex or bin" << endl << endl;
+        cout << "Can be dec, hex, oct or bin" << endl << endl;
         
         return false;
     } // end if

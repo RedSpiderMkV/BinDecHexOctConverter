@@ -13,6 +13,7 @@
 #include "Converter/BinaryConverter.h"
 #include "Converter/DecimalConverter.h"
 #include "Converter/HexadecimalConverter.h"
+#include "Converter/OctalConverter.h"
 
 using namespace std;
 
@@ -24,6 +25,7 @@ namespace NumberBaseConverter
             BinaryConverter binConverter_m;
             DecimalConverter decConverter_m;
             HexadecimalConverter hexConverter_m;
+            OctalConverter octConverter_m;
         public:
             ConverterBase *GetConverter(string converterType);
     };

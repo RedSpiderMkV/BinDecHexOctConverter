@@ -21,9 +21,11 @@ namespace NumberBaseConverter
             int parseIntFromString(string number);
             string convertToBinary(int number);
             string convertToHexadecimal(int number);
+            string convertToOctal(int number);
         public:
             string ConvertToBinary(string decStr);
             string ConvertToHexadecimal(string decStr);
+            string ConvertToOctal(string decStr);
     };
 }
 

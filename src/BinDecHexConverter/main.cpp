@@ -56,6 +56,7 @@ int main(int argc, char* argv[])
     cout << "Dec\t" << converter->ConvertToDecimal(string(argv[2])) << endl;
     cout << "Hex\t" << converter->ConvertToHexadecimal(string(argv[2])) << endl;
     cout << "Bin\t" << converter->ConvertToBinary(string(argv[2])) << endl;
+    cout << "Oct\t" << converter->ConvertToOctal(string(argv[2])) << endl;
     
     return 0;
 } // end method

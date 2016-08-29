@@ -19,9 +19,7 @@ namespace NumberBaseConverter
     {
         private:
             int parseIntFromString(string number);
-            string convertToBinary(int number);
-            string convertToHexadecimal(int number);
-            string convertToOctal(int number);
+            string convertNumber(int number, int base);
         public:
             string ConvertToBinary(string decStr);
             string ConvertToHexadecimal(string decStr);

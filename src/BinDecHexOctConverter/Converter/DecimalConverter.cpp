@@ -6,67 +6,44 @@ using namespace std;
 
 namespace NumberBaseConverter
 {
+	/* Region Public Methods */
+	
     string DecimalConverter::ConvertToBinary(string decStr)
     {
         int number = parseIntFromString(decStr);
-        return convertToBinary(number);
+		return convertNumber(number, 2);
     } // end method
     
     string DecimalConverter::ConvertToHexadecimal(string decStr)
     {
         int number = parseIntFromString(decStr);
-        return convertToHexadecimal(number);
-    } // end method   
+		return convertNumber(number, 16);
+    } // end method
     
     string DecimalConverter::ConvertToOctal(string decStr)
     {
         int number = parseIntFromString(decStr);
-        return convertToOctal(number);
+        return convertNumber(number, 8);
     } // end method
     
-    string DecimalConverter::convertToOctal(int number)
-    {
-        string octRep("");
-        if(number / 8 != 0)
-        {
-            octRep.append(convertToOctal(number / 8));
-        } // end if
-        
-        char temp[2];
-        sprintf(temp, "%d", number % 8);
-        octRep.append(temp);
-        
-        return octRep;
-    } // end method
+	/* End Region Public Methods */
     
-    string DecimalConverter::convertToBinary(int number)
-    {
-        string binRep("");
-        if(number / 2 != 0)
-        {
-            binRep.append(convertToBinary(number / 2));
-        } // end if
-        
-        char temp[2];
-        sprintf(temp, "%d", number % 2);
-        binRep.append(temp);
-        
-        return binRep;
-    } // end method
+    /* Region Private Methods */
     
-    string DecimalConverter::convertToHexadecimal(int number)
+    string DecimalConverter::convertNumber(int number, int base)
     {
-        string hexRep("");
-        if(number / 16 != 0)
-        {
-            hexRep.append(convertToHexadecimal(number / 16));
-        } // end if
-        
-        char temp[2];
-        sprintf(temp, "%x", number % 16);
-        hexRep.append(temp);
-        
-        return hexRep;
+    	string numRep("");
+    	
+    	if(number / base != 0)
+    	{
+    		numRep.append(convertNumber(number / base, base));
+    	} // end if
+    	
+    	char temp[2];
+    	sprintf(temp, "%d", number % base);
+    	numRep.append(temp);
+    	
+    	return numRep;
     } // end method
     
     int DecimalConverter::parseIntFromString(string number)
@@ -78,4 +55,6 @@ namespace NumberBaseConverter
         
         return decNumber;
     } // end method
+    
+    /* End Region Private Methods */
 } // end namespace

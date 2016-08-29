@@ -34,7 +34,7 @@ Navigate to output directory
 
 Example
 
-```./bdhconvert hex 20```
+```./bdhoconvert hex 20```
 
 Shows binary, decimal and hex representation of 0x20
 

@@ -36,7 +36,7 @@ Example
 
 ```./bdhoconvert hex 20```
 
-Shows binary, decimal and hex representation of 0x20
+Shows binary, decimal and hex and octal representation of 0x20
 
 
 
